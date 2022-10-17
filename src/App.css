@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+:root {
+  --matte-black: rgb(13, 16, 23);
+  --matte-grey: rgb(88, 89, 91);
+  --pastel-orange: rgb(248, 162, 42);
+  --brown: rgb(48, 35, 25);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+  width: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pfp {
+  height: 50%;
+  border: 8px solid var(--pastel-orange);
+  border-radius: 12rem;
+  margin-left: auto;
+  margin-right: 20%;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  background-color: var(--matte-black);
+
+}
+
+.box1 {
+  height: 92vh;
+
+}
+
+.box2 {
+  height: 100vh;
+  background-color: var(--pastel-orange)
+}
+
+.content1 {
   display: flex;
-  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.content2 {
+  display: flex;
+
+  height: 100vh;
+  width: 100%;
+
+}
+
+.intro {
+  color: var(--matte-grey);
+  font-size: 20px;
+  font-weight: bolder;
+  width: 40%;
+  margin-left: 10%;
+}
+
+.Nav {
+  display: flex;
+  background-color: var(--matte-black);
+  height: 80px;
+  width: 600px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  
+  
+  align-items: center;
+  color: var(--matte-grey) ;
+  padding:8px ;
+}
+.Nav div{
+  font-size: 25px;
+  font-weight: bolder;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  width: 200px;
+  border-radius: 5px;
+}
+.Nav div:hover{
+background-color: var(--pastel-orange);
+
 }
 
-.App-link {
-  color: #61dafb;
+.quotation{
+  opacity: 0;
+  animation: fadeIn 1s .5s forwards;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.quotation2{
+  opacity: 0;
+  animation: fadeIn 1s 3s forwards;
+}
+.name{
+  opacity: 0;
+  animation: fadeIn 1s .5s forwards;
+ 
+}
+.where{
+  opacity: 0;
+  animation: fadeIn 2s 1.5s forwards;
+}
+.why{
+  opacity: 0;
+  animation: fadeIn 3s 2.5s forwards;
+}
+@keyframes fadeIn{
+  from{ 
+    
+    opacity: 0;
+   
   }
-  to {
-    transform: rotate(360deg);
+ 
+  to{
+    opacity: 1;
+    
   }
 }
