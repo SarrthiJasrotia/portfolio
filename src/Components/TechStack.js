@@ -6,9 +6,11 @@ import mongo from '../Images/mongo.png'
 import js from '../Images/js.png'
 import html from '../Images/html-5.png'
 import css from '../Images/css-3.png'
+import git from '../Images/git-original.svg'
+import Django from '../Images/Django.svg'
 const TechStack = () => {
   return (
-    <div className='TechStack'> <h1>Skills</h1>
+    <div className='TechStack'> <h1 style={{fontSize:"3rem",textDecoration:'underline'}}>Skills</h1>
     <div className='skillGrid'>
     <div><img src={react}/>REACT.JS</div>
     <div><img src={python}/>PYTHON</div>
@@ -16,8 +18,9 @@ const TechStack = () => {
     <div><img src={mongo}/>MONGODB</div>
     <div><img src={js}/>JAVASCRIPT</div>
     <div><img src={html}/>HTML 5</div>
-    <div><img src={css}/>CSS 3</div>    
-    
+    <div><img src={css}/>CSS 3</div> 
+    <div><img src={Django}/>DJANGO</div>   
+    <div><img src={git}/>GIT</div> 
     </div>
     </div>
   )

@@ -1,13 +1,14 @@
 import React from 'react'
+import { Rotate } from 'react-reveal'
 
 const Nav = () => {
   return (
-    <div className='Nav'>
+    <Rotate bottom  delay={600} duration={1500}><div className='Nav'>
         <div>Projects</div>
         <div>TechStack</div>
         <div>Contact</div>
         
-        </div>
+        </div></Rotate>
   )
 }
 
