@@ -10,7 +10,7 @@ import git from '../Images/git-original.svg'
 import Django from '../Images/Django.svg'
 const TechStack = () => {
   return (
-    <div className='TechStack'> <h1 style={{fontSize:"3rem",textDecoration:'underline'}}>Skills</h1>
+    <div className='TechStack'> <h1>Skills</h1>
     <div className='skillGrid'>
     <div><img src={react}/>REACT.JS</div>
     <div><img src={python}/>PYTHON</div>

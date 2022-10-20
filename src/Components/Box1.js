@@ -1,26 +1,80 @@
 import { Parallax } from "react-parallax";
 import pfp from '../Images/pfp.jpg'
-import { Flip, Bounce } from "react-reveal";
+import Typewriter from "typewriter-effect";
+import { Bounce, Flip, Roll } from "react-reveal";
 const Box1 = () => (
-    <Parallax className="box1" ><Bounce top>
+    <Parallax className="box1" >
+
         <div className="content1">
 
+            {/* the animated sqaures in the banner */}
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
             <div className="intro">
 
-                <span className="quotation" style={{ color: "rgb(248, 162, 42)", fontSize: "3rem" }}>" </span>
-                <span className="hi" style={{ color: "rgb(248, 162, 42)", fontSize: "3rem" }}>Hi, </span>
-                <span className="name" style={{ color: "rgb(248, 162, 42)", fontSize: "3rem" }}>I am Sarrthi,</span>
-                <span className="where" style={{ fontSize: "2rem" }}><br />
-                    I am a full-stack software developer located in Houston,Texas.</span> <br />
-                <br /><span className="quotation2" style={{ color: "rgb(248, 162, 42)", fontSize: "3rem" }}>"</span>
+                <span className="hi" >
+                    <Typewriter
+                        onInit={(typewriter) => {
+                            typewriter.typeString("Hi, ")
+                                .pauseFor(1000)
+                                .typeString("I am Sarrthi,")
+                                .stop()
+                                .start()
+                        }} />
+                </span>
+
+                <span className="where" >
+                    <Typewriter 
+                    onInit={(typewriter)=>{
+                        
+                        typewriter
+                        .pauseFor(3500)
+                        .typeString('I am a full-stack software developer')
+                        .typeString('<br/>')
+                        .pauseFor(500) 
+                        .typeString('located in Houston Texas')
+                        // .pasteString('I ')
+                        // .pasteString('am')
+                        // .pasteString(' a ')
+                        // .pasteString('full')
+                        // .pasteString('-stack')
+                        // .pasteString(' soft')
+                        // .pasteString('ware')
+                        // .pasteString(' deve')
+                        // .pasteString('loper')
+                        // .typeString('<br/>')
+                        // .pasteString(' located')
+                        // .pasteString(' in')
+                        // .pasteString(' Houston')
+                        // .pasteString(" Texas")
+                        .start()
+                    }}
+                    />
+                    </span> 
+
+
+
+
+
 
             </div>
-            <Flip left delay={500} duration={1500}>
-                <img src={pfp} className="pfp" /></Flip>
+            {/* <Bounce right delay={500} duration={2500} > */}
+                <img src={pfp} className="pfp" />
+                {/* </Bounce> */}
 
         </div>
-    </Bounce>
-    
+
+
     </Parallax>
 )
 
@@ -28,4 +82,3 @@ export default Box1
 
 
 
-   
