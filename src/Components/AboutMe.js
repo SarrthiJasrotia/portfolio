@@ -6,8 +6,7 @@ const AboutMe = () => {
     <div className='AboutMe'>
         <h1>About Me</h1>
         
-    Field of Tech is something I have been interested in since a very young age. I have always found the way technology works fascinating, I still remember taking Rc toys and computers apart and then putting them back together just to see how everything worked when I was younger.
-    I spent the last 4-5 years involved with the hardware side of things such as robotics through competing at state and national levels, and industrial machine learning at my career technical school. I decided to pivot to the software development because of the field being more flexible hence giving me more opportunities and a better work-life balance.
+        Coding combines my two passions: my creativity I’ve honed for 12 years in visual arts and my love for solving technical problems that I developed after 5 years in robotics. I’ve entered into a college-level arts competition Vase and received multiple perfect scores for work in sculpture. Additionally, I’ve been involved with the hardware side of things such as robotics through competing at state and national levels, and then completed college courses in industrial machine learning. Now I’m thrilled to use those skills to make beautifully designed and secure fullstack applications. 
     </div>
   )
 }

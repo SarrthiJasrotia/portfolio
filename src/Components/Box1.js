@@ -1,7 +1,7 @@
 import { Parallax } from "react-parallax";
 import pfp from '../Images/pfp.jpg'
 import Typewriter from "typewriter-effect";
-import { Bounce, Flip, Roll } from "react-reveal";
+
 const Box1 = () => (
     <Parallax className="box1" >
 
