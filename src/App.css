@@ -134,7 +134,7 @@
   box-shadow: 10px 10px 0px 0px var(--black);
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3%;
+  margin-top: 7%;
   align-items: center;
   color: var(--pastel-orange);
   padding-bottom: 20px;
@@ -639,8 +639,19 @@
   font-size: larger;
   margin-bottom: 10px;
 }
-
-
+.contact-icons{
+  /* background-color: aliceblue; */
+  display: flex;
+  justify-content:center ;
+}
+.contact-icons img{
+  filter: saturate(0%);
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 80px;
+  margin-bottom: -80px;
+  width: 150px;
+}
 
 .animated-mail:hover .letter {
   height: 30rem;
