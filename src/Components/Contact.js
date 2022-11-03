@@ -24,6 +24,8 @@ const Contact = () => {
       
       
       <div className='contact-icons'>
+      
+              
       <a href='https://github.com/SarrthiJasrotia' target='_blank'><img src={Github}/></a> 
       <a href='https://www.linkedin.com/in/sarrthi-jasrotia/' target='_blank'><img src={Linkedin}/></a> 
       </div>
