@@ -294,7 +294,7 @@
   display: flex;
   flex-direction: column;
   width: 600px;
-  height: 500px;
+  height: 532px;
   margin: 1%;
   box-shadow: 15px 15px 0px 0px var(--black);
   border: 2px solid var(--pastel-orange);
@@ -373,6 +373,19 @@
   font-size: 25px;
 
   color: var(--white);
+
+}
+
+.techUsed{
+  border-top: 2px solid var(--pastel-orange);
+  color: var(--white);
+  text-align: center;
+  height: 20px;
+  padding-bottom:10px;
+}
+.techTitle{
+  font-weight: 600;
+  font-size: larger;
 
 }
 @keyframes fadeIn {
