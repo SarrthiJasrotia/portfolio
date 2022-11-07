@@ -3,6 +3,7 @@ import { Flip,Fade } from "react-reveal";
 import CoTeach from '../Images/Coteach.png';
 import Itravelynot from '../Images/Itravelynot.png';
 import TravelBlog from '../Images/TravelBlog.png'
+import Portfolio from '../Images/Portfolio.png'
 const Project =()=>(
   <div className="project">
     <Flip duration={1500}bottom><div className="title">Projects</div></Flip>
@@ -17,7 +18,7 @@ const Project =()=>(
   <Cards img={TravelBlog} title={'TravelBlog'} github={'https://github.com/SarrthiJasrotia/Project_ITravelYNot.git'} app={'https://travelblog-362615.uc.r.appspot.com/'} />
   
   {/* project 4 */}
-  <Cards img={''} title={'Test Card'} github={''} app={''} />
+  <Cards img={Portfolio} title={'Portfolio site'} github={'https://github.com/SarrthiJasrotia/portfolio.git'} app={'https://sarrthijasrotia.com/'} />
   {/* <Cards img={''} title={''} github={''} app={''} /> */}
   {/* <Cards img={''} title={''} github={''} app={''} /> */}
   {/* <Cards img={''} title={''} github={''} app={''} /> */}
