@@ -9,7 +9,7 @@ const Project =()=>(
     <Flip duration={1500}bottom><div className="title">Projects</div></Flip>
   <Fade delay={500} duration={2000}><div className="projectGrid">
     {/* project 1 */}
-  <Cards img={CoTeach} title={'CoTeach'} techUsed={'React , MongoDB, Express, CSS, Google Firebase'} github={'https://github.com/SarrthiJasrotia/CoTeach_frontend.git'} app={'https://vocal-figolla-43a5cd.netlify.app/'} />
+  <Cards img={CoTeach} title={'CoTeach'} techUsed={'React, MongoDB, Express, CSS, Google Firebase'} github={'https://github.com/SarrthiJasrotia/CoTeach_frontend.git'} app={'https://vocal-figolla-43a5cd.netlify.app/'} />
   
   {/* project 2 */}
   <Cards img={Itravelynot} title={'ITravelYNot'} techUsed={'Javascript, JQuery, APIs, CSS, HTML'} github={'https://github.com/SarrthiJasrotia/Project_ITravelYNot.git'} app={'https://itravelynot.com/'} />
