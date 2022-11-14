@@ -5,7 +5,7 @@ import Itravelynot from '../Images/Itravelynot.png';
 import TravelBlog from '../Images/TravelBlog.png'
 import Portfolio from '../Images/Portfolio.png'
 const Project =()=>(
-  <div className="project">
+  <div id="Project" className="project">
     <Flip duration={1500}bottom><div className="title">Projects</div></Flip>
   <Fade delay={500} duration={2000}><div className="projectGrid">
     {/* project 1 */}

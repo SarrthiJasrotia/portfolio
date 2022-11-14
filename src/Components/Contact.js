@@ -19,7 +19,7 @@ const Contact = () => {
       e.target.reset()
   };
   return (
-    <div>
+    <div id='Contact'>
       <Flip duration={1500} bottom><div className="title">Contact</div></Flip>
       
       

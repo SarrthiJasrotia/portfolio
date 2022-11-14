@@ -17,7 +17,7 @@ const Resume = () => {
     })
   }
   return (
-    <div className='project'>
+    <div id='Resume' className='project'>
       <Flip duration={1500} bottom><div className="title">Resume</div></Flip>
 
       <Fade delay={200} duration={1500} >
