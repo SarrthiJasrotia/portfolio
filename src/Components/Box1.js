@@ -42,7 +42,7 @@ const Box1 = () => (
                         .typeString('I am a full-stack software developer')
                         .typeString('<br/>')
                         .pauseFor(500) 
-                        .typeString('located in Houston Texas,')
+                        .typeString('located in Houston, Texas')
                         // .pasteString('I ')
                         // .pasteString('am')
                         // .pasteString(' a ')

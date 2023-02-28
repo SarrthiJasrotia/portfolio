@@ -15,7 +15,7 @@ const Project =()=>(
   <Cards img={Itravelynot} title={'ITravelYNot'} techUsed={'Javascript, JQuery, APIs, CSS, HTML'} github={'https://github.com/SarrthiJasrotia/Project_ITravelYNot.git'} app={'https://itravelynot.com/'} />
   
   {/* project 3 */}
-  <Cards img={TravelBlog} title={'TravelBlog'} techUsed={'Node, CSS, HTML, Express, Bcrypt, MongoDB'} github={'https://github.com/SarrthiJasrotia/Project_ITravelYNot.git'} app={'https://travelblog-362615.uc.r.appspot.com/'} />
+  <Cards img={TravelBlog} title={'TravelBlog'} techUsed={'Node, CSS, HTML, Express, Bcrypt, MongoDB'} github={'https://github.com/SarrthiJasrotia/personal-travel-blog.git'} app={'https://personal-travel-blog.herokuapp.com/'} />
   
   {/* project 4 */}
   <Cards img={Portfolio} title={'Portfolio site'} techUsed={'React, EmailJS, CSS'} github={'https://github.com/SarrthiJasrotia/portfolio.git'} app={'https://sarrthijasrotia.com/'} />
