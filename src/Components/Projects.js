@@ -19,7 +19,9 @@ const Project =()=>(
   
   {/* project 4 */}
   <Cards img={Portfolio} title={'Portfolio site'} techUsed={'React, EmailJS, CSS'} github={'https://github.com/SarrthiJasrotia/portfolio.git'} app={'https://sarrthijasrotia.com/'} />
-  {/* <Cards img={''} title={''} github={''} app={''} /> */}
+  
+  {/* project 5 */}
+  <Cards img={''} title={'Discussion Board'} techUsed={"Next.js, React, Google Firebase, Tailwind, TypeScript,"} github={'https://github.com/SarrthiJasrotia/discussion-board.git'} app={'https://discussionboard.herokuapp.com/'} />
   {/* <Cards img={''} title={''} github={''} app={''} /> */}
   {/* <Cards img={''} title={''} github={''} app={''} /> */}
   {/* <Cards img={''} title={''} github={''} app={''} /> */}
