@@ -10,6 +10,7 @@ import git from '../Images/git-original.svg'
 import Django from '../Images/Django.svg'
 import nextjs from '../Images/nextjs.svg'
 import tailwind from '../Images/tailwind.svg'
+import firebase from "../Images/Firebase.svg"
 
 
 const TechStack = () => {
@@ -20,6 +21,8 @@ const TechStack = () => {
     <div><img src={python}/>PYTHON</div>
     <div><img src={node}/>NODE.JS</div>
     <div><img src={nextjs}/>NEXT.JS</div> 
+    <div><img src={firebase}/>FIREBASE</div>
+
     <div><img src={mongo}/>MONGODB</div>
     <div><img src={js}/>JAVASCRIPT</div>
     <div><img src={html}/>HTML 5</div>
