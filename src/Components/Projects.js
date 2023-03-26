@@ -5,6 +5,8 @@ import Itravelynot from '../Images/Itravelynot.png';
 import TravelBlog from '../Images/TravelBlog.png'
 import Portfolio from '../Images/Portfolio.png'
 import DiscussionBoard from '../Images/DiscussionBoard.png'
+import FoodatHome from '../Images/Food@Home.png'
+
 const Project =()=>(
   <div id="Project" className="project">
     <Flip duration={1500}bottom><div className="title">Projects</div></Flip>
@@ -12,7 +14,7 @@ const Project =()=>(
     
     
     {/* Project 6 */}
-    <Cards img={''} title={'Food@Home - powered by AI'} techUsed={'OpenAI, React, Express, CSS, Google Firebase'} github={'https://github.com/SarrthiJasrotia/we-got-food-at-home-SJ.git'} app={''} />
+    <Cards img={FoodatHome} title={'Food@Home - powered by AI'} techUsed={'OpenAI, React, Express, CSS, Google Firebase'} github={'https://github.com/SarrthiJasrotia/we-got-food-at-home-SJ.git'} app={'https://food-at-home.netlify.app/'} />
     
     
     {/* project 1 */}
