@@ -9,10 +9,10 @@ import FoodatHome from '../Images/Food@Home.png'
 
 const Project =()=>(
   <div id="Project" className="project">
-    <Flip duration={1500}bottom><div className="title">Projects</div></Flip>
+  <Flip duration={1500}bottom><div className="title">Projects</div></Flip>
   <Fade delay={500} duration={2000}><div className="projectGrid">
-    
-    
+  
+  
   {/* Project 6 */}
   <Cards img={FoodatHome} title={'Food@Home - powered by AI'} techUsed={'OpenAI, React, Express, CSS, Google Firebase'} github={'https://github.com/SarrthiJasrotia/we-got-food-at-home-SJ.git'} app={'https://food-at-home.netlify.app/'} />
     

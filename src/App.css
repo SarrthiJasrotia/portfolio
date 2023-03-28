@@ -24,17 +24,16 @@
 
 .container {
   background-color: var(--matte-black);
-
+  
 }
 
 .box1 {
-  /* border-radius: 20px; */
   height: 60vh;
   background-color: var(--matte-black);
 }
 
 .box2 {
-
+  
   height: auto;
   background-color: var(--matte-grey)
 }
@@ -690,4 +689,10 @@
   height: 30rem;
   transform: translateY(-300px);
   /* background-color: aqua; */
+}
+
+@media only screen and (max-width: 700px) {
+  .content2{
+    background-color: antiquewhite;
+  }
 }
