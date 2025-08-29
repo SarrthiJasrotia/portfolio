@@ -908,4 +908,98 @@
     padding: 12px;
   }
   .animated-mail:hover .letter { transform: translateY(-35%); }
+
+  .projectGrid, .projectCard, .cardText, .linkBox { position: relative; z-index: 2; }
+
+  /* Contact envelope: contained, non-blocking */
+  .letter-image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    margin: 32px auto 24px;
+    z-index: 1;                /* keep it behind other UI */
+  }
+
+  /* Use aspect-ratio to size the envelope predictably */
+  .animated-mail {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 1;       /* 2:1 envelope box */
+    height: auto;
+    overflow: visible;
+    pointer-events: none;      /* do NOT intercept scroll/taps */
+  }
+
+  .back-fold {
+    position: absolute;
+    inset: 0;                  /* fill the box */
+    background: var(--pastel-orange);
+    z-index: 0;
+  }
+
+  /* Triangles sized relative to the box, but kept inside it */
+  .right-fold {
+    position: absolute; bottom: 0; right: 0;
+    width: 0; height: 0; border-style: solid;
+    border-width: 0 0 50% 100%;
+    border-color: transparent transparent var(--black) transparent;
+    z-index: 1; pointer-events: none;
+  }
+
+  .left-fold {
+    position: absolute; bottom: 0; left: 0;
+    width: 0; height: 0; border-style: solid;
+    border-width: 50% 0 50% 50%;
+    border-color: transparent transparent transparent var(--matte-black);
+    z-index: 1; pointer-events: none;
+  }
+
+  .letter {
+    position: absolute; left: 5%; right: 5%; bottom: 15%;
+    aspect-ratio: 11 / 4;
+    height: auto; background: #fff; overflow: hidden;
+    transform: translateY(0);
+    will-change: transform;
+    transition: transform .35s ease;
+    z-index: 2;                /* above folds but inside the box */
+    padding: 12px;
+    pointer-events: auto;      /* allow taps on the form/content */
+  }
+
+  /* Hover isn’t real on touch, but keep this harmless */
+  .animated-mail:hover .letter { transform: translateY(-35%); }
+  
+  /* ===== Mobile: remove the animated envelope ===== */
+@media (max-width: 900px) {
+  .letter-image,
+  .animated-mail,
+  .back-fold,
+  .left-fold,
+  .right-fold,
+  .letter {
+    display: none !important;
+  }
+
+  /* Make sure contact icons show cleanly */
+  .contact-icons {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 16px auto 32px;
+    padding: 8px 0;
+  }
+
+  .contact-icons img {
+    width: 56px;
+    height: auto;
+    filter: none;  /* always colored */
+  }
+}
+
+
+
+
+
 }
