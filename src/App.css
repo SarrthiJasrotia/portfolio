@@ -246,7 +246,6 @@
 }
 
 .skillGrid div {
-  filter: saturate(0%);
   margin-left: 2px;
   margin-right: 2px;
   margin-bottom: 10px;
@@ -263,10 +262,60 @@
   /* border-radius: 20px; */
 }
 
-.skillGrid div:hover {
-
-  filter: saturate(100%);
+.skillGrid {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  width: 46vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
+.skillGrid img {
+  border-radius: 20px;
+  width: 80%;
+  height: 80%;
+}
+
+.skillGrid div {
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+
+  /* NEW INTERACTION */
+  cursor: pointer;
+  filter: none; /* full color always */
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  will-change: transform;
+}
+
+/* Desktop hover bounce */
+@media (hover: hover) and (pointer: fine) {
+  .skillGrid div:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  }
+  .skillGrid div:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Mobile tap press */
+@media (hover: none) {
+  .skillGrid div:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+}
+
 
 .TechStack h1 {
   color: var(--white);
@@ -691,8 +740,172 @@
   /* background-color: aqua; */
 }
 
-@media only screen and (max-width: 700px) {
-  .content2{
-    background-color: antiquewhite;
+
+
+/* ===== MOBILE-ONLY FIX PACK (≤900px) ===== */
+@media (max-width: 900px) {
+  /* General safety */
+  html, body { overflow-x: hidden; }
+
+  /* Headline + nav become fluid */
+  .title,
+  .Nav {
+    width: 92vw;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .title {
+    font-size: clamp(28px, 7vw, 40px);
+    height: auto;
+    padding-bottom: 12px;
+  }
+
+  .Nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: auto;
+    padding: 8px;
+  }
+  .Nav a {
+    width: auto;                /* kill 200px fixed width */
+    flex: 1 1 0;                /* share space evenly */
+    min-width: 0;
+    font-size: clamp(16px, 4vw, 20px);
+    height: 48px;
+  }
+  /* stop font-size jump from breaking layout on touch */
+  @media (hover: none) {
+    .Nav a:hover { font-size: inherit; background: inherit; color: inherit; }
+  }
+
+  /* Hero: no fixed positioning on phones (prevents overlap/cropping) */
+  .content1 {
+    position: static;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0 24px;
+    z-index: 3;                 /* keeps above next block edges */
+  }
+  .box1 { min-height: 60vh; padding-bottom: 12px; }
+
+  /* Profile image: center & scale */
+  .pfp {
+    width: clamp(140px, 40vw, 260px);
+    margin: 12px auto 0;
+    position: relative;
+    z-index: 4;
+  }
+
+  /* Push the grey section down a bit so it doesn't collide with hero */
+  .box2 { margin-top: 12px; }
+
+  /* Columns stack; clean dividers */
+  .box2column {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .columnDiv1,
+  .columnDiv2 {
+    border: 0 !important;       /* remove vertical borders when stacked */
+    padding: 8px 12px;
+  }
+  /* Optional horizontal divider look */
+  .columnDiv2 { border-top: 2px solid var(--matte-black); }
+
+  /* About + skills widths */
+  .AboutMe {
+    width: 92vw;
+    margin-inline: auto;
+    font-size: clamp(16px, 2.7vw, 20px);
+    text-align: center;
+  }
+  /* Skills grid: force 4 columns on mobile */
+  /* Skills grid: 3 columns, centered on screen */
+
+
+
+
+  /* Projects: fluid cards & images */
+  .projectGrid { padding-inline: 3vw; }
+  .projectCard {
+    width: 92vw;
+    height: auto;              /* kill fixed height */
+    margin: 12px 0;
+  }
+  .cardPic {
+    width: 100%;
+    height: auto;              /* kill 350px fixed height */
+  }
+  /* avoid “jiggle” on touch */
+  @media (hover: none) { .projectCard:hover { transform: none; } }
+
+  /* Tech-used strip should be auto-height on phones */
+  .techUsed { height: auto; padding: 8px 0; }
+
+  /* Contact envelope: scale down & avoid clipping */
+  .letter-image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;               /* fluid width */
+    height: auto;
+    margin-top: 60px;
+    z-index: 2;
+  }
+  .animated-mail { position: relative; width: 100%; height: auto; }
+  .back-fold { position: relative; width: 100%; aspect-ratio: 2 / 1; }
+  .right-fold {
+    position: absolute; bottom: 0; right: 0;
+    width: 0; height: 0; border-style: solid;
+    border-width: 0 0 50% 100%; border-color: transparent transparent var(--black) transparent;
+  }
+  .left-fold {
+    position: absolute; bottom: 0; left: 0;
+    width: 0; height: 0; border-style: solid;
+    border-width: 50% 0 50% 50%; border-color: transparent transparent transparent var(--matte-black);
+  }
+  .letter {
+    position: absolute; left: 5%; right: 5%; bottom: 15%;
+    height: auto; aspect-ratio: 11 / 4; background: #fff; overflow: hidden;
+    transform: translateY(0);
+    will-change: transform;
+    transition: transform .35s ease;
+    z-index: 3;
+    padding: 12px;
+  }
+  .animated-mail:hover .letter { transform: translateY(-35%); }
+
+  .skillGrid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    padding: 0 12px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .skillGrid div {
+    flex: 0 1 calc(33.333% - 16px) !important; /* 3 per row */
+    max-width: 100px !important;
+    width: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    filter: none !important; 
+  }
+
+  .skillGrid img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+  }
+  .skillGrid div:hover {
+    filter: none !important;   /* no hover effect on mobile */
   }
 }
