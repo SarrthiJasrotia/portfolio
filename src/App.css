@@ -932,4 +932,69 @@
   .skillGrid div:hover {
     filter: none !important;   /* no hover effect on mobile */
   }
+  .box1 {
+    position: relative !important;
+    height: auto !important;      /* no fixed 60vh */
+    min-height: 0 !important;
+    padding: 12px 0 0 !important; /* small breathing room */
+    margin: 0 !important;
+  }
+  .content1 {
+    position: relative !important;
+    z-index: 2 !important;
+    height: auto !important;
+    padding: 12px 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 2) Hide the animated background layer that’s creating the extra space */
+  .circles {
+    display: block !important;             /* undo any previous 'display:none' */
+    position: absolute !important;
+    inset: 0 !important;                   /* top:0; right:0; bottom:0; left:0 */
+    height: 100% !important;
+    pointer-events: none !important;       /* don't block taps */
+    z-index: 1 !important;                 /* behind the text/pfp */
+  }
+
+  /* 3) Tighten spacing before the Nav */
+  .title { margin-top: 10px !important; }
+  .Nav   { margin-top: 8px  !important; }
+
+  .hi,
+  .name,
+  .where,
+  .quotation,
+  .quotation2,
+  .why {
+    opacity: 1 !important;          /* always full opacity */
+    animation: none !important;     /* no fade delays */
+    position: relative;
+    z-index: 3;                     /* above the circles */
+  }
+
+  /* Optional: add subtle text background for legibility */
+  .hi, .name, .where {
+    background: rgba(0,0,0,0.5);    /* dark overlay */
+    padding: 4px 8px;
+    border-radius: 6px;
+  }
+  .box1 { position: relative !important; }
+  .circles {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    opacity: 0.28 !important;           /* soften the shapes */
+  }
+  .content1 { position: relative !important; z-index: 2 !important; }
+
+  /* make text fully visible and readable without any box */
+  .hi, .name, .where, .quotation, .quotation2, .why {
+    opacity: 1 !important;
+    animation: none !important;
+    background: transparent !important; /* REMOVE the dark rectangle */
+    text-shadow: 0 2px 8px rgba(0,0,0,.85); /* readability over animation */
+  }
+
 }
