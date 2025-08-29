@@ -797,17 +797,31 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 48px 0 24px;
+    padding: 24px 12px;
+    text-align: center;
+    flex-direction: column;  
     z-index: 3;                 /* keeps above next block edges */
   }
   .box1 { min-height: 60vh; padding-bottom: 12px; }
 
   /* Profile image: center & scale */
   .pfp {
-    width: clamp(140px, 40vw, 260px);
-    margin: 12px auto 0;
+    width: clamp(160px, 50vw, 220px);
+    order: -1;                 /* move picture to top */
+    margin: 0 auto 16px auto;
+    border: 6px solid var(--pastel-orange);
+    border-radius: 2rem;
+
     position: relative;
     z-index: 4;
+  }
+  .hi, .name, .where {
+    font-size: clamp(20px, 6vw, 28px);  /* responsive size */
+    margin: 6px 0;
+  }
+  .quotation, .quotation2 {
+    font-size: clamp(14px, 4vw, 18px);
+    margin-top: 8px;
   }
 
   /* Push the grey section down a bit so it doesn't collide with hero */
