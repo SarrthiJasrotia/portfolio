@@ -760,7 +760,17 @@
     height: auto;
     padding-bottom: 12px;
   }
+  /* Project title fixes for mobile */
+  .projectTitle {
+    font-size: clamp(18px, 5vw, 24px) !important; /* shrink to fit */
+    padding: 8px;
+    height: auto !important;   /* let it grow if text wraps */
+    line-height: 1.2;          /* tighter line spacing */
+    text-align: center;        /* center text nicely */
+    word-break: break-word;    /* break long words instead of overflowing */
+  }
 
+  
   .Nav {
     display: flex;
     align-items: center;
