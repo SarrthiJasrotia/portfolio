@@ -858,7 +858,7 @@
     margin: 0 auto !important;
   }
   .skillGrid div {
-    flex: 0 1 calc(25% - 12px) !important;  /* 3 per row */
+    flex: 0 1 calc(25% - 12px) !important;  /* 4per row */
     max-width: 100px !important;
     width: auto !important;
     display: flex !important;
